@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-s-04-11-2026
+  namespace: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-s-04-11-2026
+  template:
+    metadata:
+      labels:
+        app: nginx-s-04-11-2026
+        nom: sahki
+        empreinte: s-04-11-2026
+    spec:
+      containers:
+      - name: nginx-s-04-11-2026
+        image: nginx-s-04-11-2026:1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 25m
+            memory: 16Mi
+          limits:
+            cpu: 300m
+            memory: 64Mi
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 20
+          periodSeconds: 15
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-s-04-11-2026
+  namespace: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-s-04-11-2026
+  ports:
+  - name: http-s-04-11-2026
+    port: 80
+    targetPort: 80
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nginx-s-04-11-2026
+  namespace: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nginx-s-04-11-2026
+  minReplicas: 3
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 60
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 120

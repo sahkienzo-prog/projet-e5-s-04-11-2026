@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stripe-s-04-11-2026
+  namespace: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: stripe-s-04-11-2026
+  template:
+    metadata:
+      labels:
+        app: stripe-s-04-11-2026
+        nom: sahki
+        empreinte: s-04-11-2026
+    spec:
+      containers:
+      - name: stripe-s-04-11-2026
+        image: stripe-s-04-11-2026:1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 4242
+        envFrom:
+        - secretRef:
+            name: stripe-s-04-11-2026
+        env:
+        - name: DOMAIN
+          value: http://stripe-preprod-s-04-11-2026.localhost
+        resources:
+          requests:
+            cpu: 50m
+            memory: 96Mi
+          limits:
+            cpu: 500m
+            memory: 256Mi
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 4242
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 4242
+          initialDelaySeconds: 20
+          periodSeconds: 15
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stripe-s-04-11-2026
+  namespace: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  type: ClusterIP
+  selector:
+    app: stripe-s-04-11-2026
+  ports:
+  - name: http-s-04-11-2026
+    port: 4242
+    targetPort: 4242
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: stripe-s-04-11-2026
+  namespace: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: stripe-s-04-11-2026
+  minReplicas: 3
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 60
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 120

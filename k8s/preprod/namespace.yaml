@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026

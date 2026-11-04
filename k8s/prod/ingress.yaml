@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: applications-s-04-11-2026
+  namespace: prod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: stripe-prod-s-04-11-2026.localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: stripe-s-04-11-2026
+            port:
+              number: 4242
+  - host: podinfo-prod-s-04-11-2026.localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: podinfo-s-04-11-2026
+            port:
+              number: 9898
