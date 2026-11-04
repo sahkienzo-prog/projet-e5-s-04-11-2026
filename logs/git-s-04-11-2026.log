@@ -1,1 +1,4 @@
+62063aa Valide le paiement Stripe et publie les trois images Docker Hub publiques
+91505b2 Ajoute les preuves reelles de charge et le rapport individuel avec architecture
+a312fd9 Corrige le delai de demarrage K3s et prepare les tests sans identifiants Stripe
 2a4f6ed Ajout des applications existantes et des configurations K3s des trois environnements
