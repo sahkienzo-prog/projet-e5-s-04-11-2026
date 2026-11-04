@@ -6,7 +6,9 @@ Empreinte : s-04-11-2026. Docker Hub : etest15.
 
 Le projet utilise trois applications existantes : l’exemple officiel Stripe Checkout avec Flask, Podinfo et Nginx. Le code des applications n’a pas été développé pour ce projet. Les fichiers de configuration et les scripts ne contiennent pas de commentaires avec un dièse.
 
-Le dossier contient les configurations Kubernetes, les Dockerfile, les scripts simples, les sources de Stripe avec sa licence et les journaux réels. Lire RAPPORT.md et RESULTATS.md pour distinguer les vérifications terminées des étapes à terminer avec les comptes personnels.
+Le dossier contient les configurations Kubernetes, les Dockerfile, les scripts simples, les sources de Stripe avec sa licence et les journaux réels. Lire RAPPORT.md et RESULTATS.md pour consulter les résultats et les preuves.
+
+Le compte rendu court à compléter est conservé séparément sur l’ordinateur et n’est pas publié dans ce dépôt. Le rapport PDF existant constitue la version détaillée précédente.
 
 Accéder à la VM existante
 ------------------------
@@ -84,7 +86,7 @@ curl.exe -H 'Host: podinfo-mlops-s-04-11-2026.172-26-141-177.sslip.io' http://17
 Versionnement et remise
 ----------------------
 
-Le dépôt Git et ses commits sont dans ce dossier, y compris le dossier caché .git. Ne pas supprimer .git avant de remettre le projet. Le dépôt est local ; aucun dépôt GitHub distant n’est créé automatiquement.
+Le dépôt Git conserve les commits des différentes étapes. Le dépôt GitHub permet au professeur de consulter les fichiers et l’historique. Les liens vers les applications utilisent l’adresse privée de la VM : publier le dépôt ne rend pas les applications accessibles sur Internet.
 
 Ne pas envoyer .env, le dossier secrets, ni les identifiants Docker. Avant d’ajouter de nouveaux logs, vérifier qu’ils ne contiennent pas de secrets. Le paiement Stripe de test et les trois images publiques Docker Hub ont été vérifiés. Les détails et les preuves se trouvent dans RESULTATS.md. Relire le dossier avant la remise individuelle.
 
@@ -96,4 +98,4 @@ git commit -m "Decrit precisement le travail realise"
 git log --oneline
 ```
 
-Le sujet demande aussi de réserver un créneau d’oral dans le fichier du cours et de déposer personnellement le rendu dans Teams.
+L’oral de cours a déjà été passé. Le compte rendu final avec les captures et le lien du dépôt doit être déposé personnellement dans Teams, dans l’onglet Devoirs.
