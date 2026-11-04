@@ -1,95 +1,95 @@
-NAMESPACE                    NAME                                          READY   STATUS      RESTARTS      AGE     IP           NODE              NOMINATED NODE   READINESS GATES
-kube-system                  pod/coredns-7cfb7bc9c7-vk2wx                  1/1     Running     0             11m     10.42.0.6    e5-s-04-11-2026   <none>           <none>
-kube-system                  pod/helm-install-traefik-crd-bxd5z            0/1     Completed   0             11m     10.42.0.3    e5-s-04-11-2026   <none>           <none>
-kube-system                  pod/helm-install-traefik-gjb4l                0/1     Completed   1 (11m ago)   11m     10.42.0.2    e5-s-04-11-2026   <none>           <none>
-kube-system                  pod/local-path-provisioner-77b9867795-nlh79   1/1     Running     0             11m     10.42.0.4    e5-s-04-11-2026   <none>           <none>
-kube-system                  pod/metrics-server-6dc596dfb8-qrzvs           1/1     Running     0             11m     10.42.0.5    e5-s-04-11-2026   <none>           <none>
-kube-system                  pod/svclb-traefik-8f857d93-7xqnp              2/2     Running     0             10m     10.42.0.7    e5-s-04-11-2026   <none>           <none>
-kube-system                  pod/traefik-7c8544f77-tnqqv                   1/1     Running     0             10m     10.42.0.8    e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/nginx-s-04-11-2026-7bff8f6ff9-mfrfg       1/1     Running     0             9m33s   10.42.0.12   e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/nginx-s-04-11-2026-7bff8f6ff9-qt974       1/1     Running     0             8m3s    10.42.0.41   e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/nginx-s-04-11-2026-7bff8f6ff9-rs9gh       1/1     Running     0             9m33s   10.42.0.13   e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/podinfo-s-04-11-2026-775d4cbc6c-7t6xh     1/1     Running     0             7m47s   10.42.0.45   e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/podinfo-s-04-11-2026-775d4cbc6c-lf5cp     1/1     Running     0             9m33s   10.42.0.9    e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/podinfo-s-04-11-2026-775d4cbc6c-qfdzc     1/1     Running     0             9m33s   10.42.0.11   e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/stripe-s-04-11-2026-5f4774cd9b-6snwb      1/1     Running     0             9m33s   10.42.0.15   e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/stripe-s-04-11-2026-5f4774cd9b-kgjml      1/1     Running     0             9m33s   10.42.0.17   e5-s-04-11-2026   <none>           <none>
-mlops-s-04-11-2026           pod/stripe-s-04-11-2026-5f4774cd9b-q9gd4      1/1     Running     0             9m33s   10.42.0.14   e5-s-04-11-2026   <none>           <none>
-observability-s-04-11-2026   pod/netdata-s-04-11-2026-f5df9fb67-4b5fj      1/1     Running     0             9m31s   10.42.0.34   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/nginx-s-04-11-2026-7bff8f6ff9-j8r6n       1/1     Running     0             9m32s   10.42.0.19   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/nginx-s-04-11-2026-7bff8f6ff9-lpbrx       1/1     Running     0             9m32s   10.42.0.18   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/nginx-s-04-11-2026-7bff8f6ff9-ztgsf       1/1     Running     0             9m32s   10.42.0.20   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/podinfo-s-04-11-2026-775d4cbc6c-f8s69     1/1     Running     0             9m32s   10.42.0.21   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/podinfo-s-04-11-2026-775d4cbc6c-hzttg     1/1     Running     0             9m32s   10.42.0.22   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/podinfo-s-04-11-2026-775d4cbc6c-lqdn7     1/1     Running     0             9m32s   10.42.0.23   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/stripe-s-04-11-2026-7845d8d987-4rknw      1/1     Running     0             9m32s   10.42.0.26   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/stripe-s-04-11-2026-7845d8d987-5n5dw      1/1     Running     0             9m32s   10.42.0.25   e5-s-04-11-2026   <none>           <none>
-preprod-s-04-11-2026         pod/stripe-s-04-11-2026-7845d8d987-dlk6j      1/1     Running     0             9m32s   10.42.0.24   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/nginx-s-04-11-2026-7bff8f6ff9-c9xgk       1/1     Running     0             9m32s   10.42.0.30   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/nginx-s-04-11-2026-7bff8f6ff9-ql655       1/1     Running     0             9m32s   10.42.0.27   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/nginx-s-04-11-2026-7bff8f6ff9-zrd85       1/1     Running     0             9m32s   10.42.0.29   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/podinfo-s-04-11-2026-775d4cbc6c-bdtmr     1/1     Running     0             9m31s   10.42.0.31   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/podinfo-s-04-11-2026-775d4cbc6c-g4xxc     1/1     Running     0             9m31s   10.42.0.32   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/podinfo-s-04-11-2026-775d4cbc6c-wmp4n     1/1     Running     0             9m32s   10.42.0.28   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/stripe-s-04-11-2026-556fbd5d54-llrgz      1/1     Running     0             9m31s   10.42.0.36   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/stripe-s-04-11-2026-556fbd5d54-t6ttg      1/1     Running     0             9m31s   10.42.0.33   e5-s-04-11-2026   <none>           <none>
-prod-s-04-11-2026            pod/stripe-s-04-11-2026-556fbd5d54-xvwwg      1/1     Running     0             9m31s   10.42.0.35   e5-s-04-11-2026   <none>           <none>
+NAMESPACE                    NAME                                          READY   STATUS      RESTARTS      AGE   IP            NODE              NOMINATED NODE   READINESS GATES
+kube-system                  pod/coredns-7cfb7bc9c7-vk2wx                  1/1     Running     0             26m   10.42.0.6     e5-s-04-11-2026   <none>           <none>
+kube-system                  pod/helm-install-traefik-crd-bxd5z            0/1     Completed   0             26m   10.42.0.3     e5-s-04-11-2026   <none>           <none>
+kube-system                  pod/helm-install-traefik-gjb4l                0/1     Completed   1 (26m ago)   26m   10.42.0.2     e5-s-04-11-2026   <none>           <none>
+kube-system                  pod/local-path-provisioner-77b9867795-nlh79   1/1     Running     0             26m   10.42.0.4     e5-s-04-11-2026   <none>           <none>
+kube-system                  pod/metrics-server-6dc596dfb8-qrzvs           1/1     Running     0             26m   10.42.0.5     e5-s-04-11-2026   <none>           <none>
+kube-system                  pod/svclb-traefik-8f857d93-7xqnp              2/2     Running     0             26m   10.42.0.7     e5-s-04-11-2026   <none>           <none>
+kube-system                  pod/traefik-7c8544f77-tnqqv                   1/1     Running     0             26m   10.42.0.8     e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/nginx-s-04-11-2026-788d9d895c-56qdb       1/1     Running     0             79s   10.42.0.131   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/nginx-s-04-11-2026-788d9d895c-j2c7r       1/1     Running     0             65s   10.42.0.145   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/nginx-s-04-11-2026-788d9d895c-n6bss       1/1     Running     0             54s   10.42.0.154   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/podinfo-s-04-11-2026-64b46bbcf7-jlqcg     1/1     Running     0             67s   10.42.0.139   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/podinfo-s-04-11-2026-64b46bbcf7-q52ts     1/1     Running     0             79s   10.42.0.130   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/podinfo-s-04-11-2026-64b46bbcf7-wq2nh     1/1     Running     0             56s   10.42.0.151   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/stripe-s-04-11-2026-65cc75549-4qpmq       1/1     Running     0             79s   10.42.0.129   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/stripe-s-04-11-2026-65cc75549-cptn2       1/1     Running     0             67s   10.42.0.140   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           pod/stripe-s-04-11-2026-65cc75549-gkwpv       1/1     Running     0             56s   10.42.0.149   e5-s-04-11-2026   <none>           <none>
+observability-s-04-11-2026   pod/netdata-s-04-11-2026-f5df9fb67-4b5fj      1/1     Running     0             24m   10.42.0.34    e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/nginx-s-04-11-2026-788d9d895c-6tqwr       1/1     Running     0             67s   10.42.0.138   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/nginx-s-04-11-2026-788d9d895c-cf2m5       1/1     Running     0             56s   10.42.0.148   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/nginx-s-04-11-2026-788d9d895c-wxr7j       1/1     Running     0             79s   10.42.0.134   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/podinfo-s-04-11-2026-64b46bbcf7-5z6x9     1/1     Running     0             79s   10.42.0.133   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/podinfo-s-04-11-2026-64b46bbcf7-7m9vh     1/1     Running     0             55s   10.42.0.153   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/podinfo-s-04-11-2026-64b46bbcf7-jtc9w     1/1     Running     0             67s   10.42.0.143   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/stripe-s-04-11-2026-86bc75b467-cstkz      1/1     Running     0             79s   10.42.0.132   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/stripe-s-04-11-2026-86bc75b467-dgxxf      1/1     Running     0             54s   10.42.0.155   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         pod/stripe-s-04-11-2026-86bc75b467-mlbtd      1/1     Running     0             65s   10.42.0.146   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/nginx-s-04-11-2026-788d9d895c-2qhrc       1/1     Running     0             78s   10.42.0.137   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/nginx-s-04-11-2026-788d9d895c-6vx8g       1/1     Running     0             56s   10.42.0.147   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/nginx-s-04-11-2026-788d9d895c-t65d8       1/1     Running     0             67s   10.42.0.142   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/podinfo-s-04-11-2026-64b46bbcf7-65t87     1/1     Running     0             66s   10.42.0.144   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/podinfo-s-04-11-2026-64b46bbcf7-6m9r7     1/1     Running     0             78s   10.42.0.136   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/podinfo-s-04-11-2026-64b46bbcf7-g8jxb     1/1     Running     0             55s   10.42.0.152   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/stripe-s-04-11-2026-64cc8c58bb-6ccx8      1/1     Running     0             78s   10.42.0.135   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/stripe-s-04-11-2026-64cc8c58bb-dl9mt      1/1     Running     0             67s   10.42.0.141   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            pod/stripe-s-04-11-2026-64cc8c58bb-zxbvd      1/1     Running     0             56s   10.42.0.150   e5-s-04-11-2026   <none>           <none>
 
-NAMESPACE                    NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS               IMAGES                                    SELECTOR
-kube-system                  deployment.apps/coredns                  1/1     1            1           11m     coredns                  rancher/mirrored-coredns-coredns:1.14.7   k8s-app=kube-dns
-kube-system                  deployment.apps/local-path-provisioner   1/1     1            1           11m     local-path-provisioner   rancher/local-path-provisioner:v0.0.37    app=local-path-provisioner
-kube-system                  deployment.apps/metrics-server           1/1     1            1           11m     metrics-server           rancher/mirrored-metrics-server:v0.9.0    k8s-app=metrics-server
-kube-system                  deployment.apps/traefik                  1/1     1            1           10m     traefik                  rancher/mirrored-library-traefik:3.7.13   app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik
-mlops-s-04-11-2026           deployment.apps/nginx-s-04-11-2026       3/3     3            3           9m33s   nginx-s-04-11-2026       nginx-s-04-11-2026:1                      app=nginx-s-04-11-2026
-mlops-s-04-11-2026           deployment.apps/podinfo-s-04-11-2026     3/3     3            3           9m33s   podinfo-s-04-11-2026     podinfo-s-04-11-2026:1                    app=podinfo-s-04-11-2026
-mlops-s-04-11-2026           deployment.apps/stripe-s-04-11-2026      3/3     3            3           9m33s   stripe-s-04-11-2026      stripe-s-04-11-2026:1                     app=stripe-s-04-11-2026
-observability-s-04-11-2026   deployment.apps/netdata-s-04-11-2026     1/1     1            1           9m32s   netdata-s-04-11-2026     netdata/netdata:v2.6.3                    app=netdata-s-04-11-2026
-preprod-s-04-11-2026         deployment.apps/nginx-s-04-11-2026       3/3     3            3           9m32s   nginx-s-04-11-2026       nginx-s-04-11-2026:1                      app=nginx-s-04-11-2026
-preprod-s-04-11-2026         deployment.apps/podinfo-s-04-11-2026     3/3     3            3           9m32s   podinfo-s-04-11-2026     podinfo-s-04-11-2026:1                    app=podinfo-s-04-11-2026
-preprod-s-04-11-2026         deployment.apps/stripe-s-04-11-2026      3/3     3            3           9m32s   stripe-s-04-11-2026      stripe-s-04-11-2026:1                     app=stripe-s-04-11-2026
-prod-s-04-11-2026            deployment.apps/nginx-s-04-11-2026       3/3     3            3           9m32s   nginx-s-04-11-2026       nginx-s-04-11-2026:1                      app=nginx-s-04-11-2026
-prod-s-04-11-2026            deployment.apps/podinfo-s-04-11-2026     3/3     3            3           9m32s   podinfo-s-04-11-2026     podinfo-s-04-11-2026:1                    app=podinfo-s-04-11-2026
-prod-s-04-11-2026            deployment.apps/stripe-s-04-11-2026      3/3     3            3           9m32s   stripe-s-04-11-2026      stripe-s-04-11-2026:1                     app=stripe-s-04-11-2026
+NAMESPACE                    NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS               IMAGES                                    SELECTOR
+kube-system                  deployment.apps/coredns                  1/1     1            1           26m   coredns                  rancher/mirrored-coredns-coredns:1.14.7   k8s-app=kube-dns
+kube-system                  deployment.apps/local-path-provisioner   1/1     1            1           26m   local-path-provisioner   rancher/local-path-provisioner:v0.0.37    app=local-path-provisioner
+kube-system                  deployment.apps/metrics-server           1/1     1            1           26m   metrics-server           rancher/mirrored-metrics-server:v0.9.0    k8s-app=metrics-server
+kube-system                  deployment.apps/traefik                  1/1     1            1           26m   traefik                  rancher/mirrored-library-traefik:3.7.13   app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik
+mlops-s-04-11-2026           deployment.apps/nginx-s-04-11-2026       3/3     3            3           24m   nginx-s-04-11-2026       etest15/nginx-s-04-11-2026:1              app=nginx-s-04-11-2026
+mlops-s-04-11-2026           deployment.apps/podinfo-s-04-11-2026     3/3     3            3           24m   podinfo-s-04-11-2026     etest15/podinfo-s-04-11-2026:1            app=podinfo-s-04-11-2026
+mlops-s-04-11-2026           deployment.apps/stripe-s-04-11-2026      3/3     3            3           24m   stripe-s-04-11-2026      etest15/stripe-s-04-11-2026:1             app=stripe-s-04-11-2026
+observability-s-04-11-2026   deployment.apps/netdata-s-04-11-2026     1/1     1            1           24m   netdata-s-04-11-2026     netdata/netdata:v2.6.3                    app=netdata-s-04-11-2026
+preprod-s-04-11-2026         deployment.apps/nginx-s-04-11-2026       3/3     3            3           24m   nginx-s-04-11-2026       etest15/nginx-s-04-11-2026:1              app=nginx-s-04-11-2026
+preprod-s-04-11-2026         deployment.apps/podinfo-s-04-11-2026     3/3     3            3           24m   podinfo-s-04-11-2026     etest15/podinfo-s-04-11-2026:1            app=podinfo-s-04-11-2026
+preprod-s-04-11-2026         deployment.apps/stripe-s-04-11-2026      3/3     3            3           24m   stripe-s-04-11-2026      etest15/stripe-s-04-11-2026:1             app=stripe-s-04-11-2026
+prod-s-04-11-2026            deployment.apps/nginx-s-04-11-2026       3/3     3            3           24m   nginx-s-04-11-2026       etest15/nginx-s-04-11-2026:1              app=nginx-s-04-11-2026
+prod-s-04-11-2026            deployment.apps/podinfo-s-04-11-2026     3/3     3            3           24m   podinfo-s-04-11-2026     etest15/podinfo-s-04-11-2026:1            app=podinfo-s-04-11-2026
+prod-s-04-11-2026            deployment.apps/stripe-s-04-11-2026      3/3     3            3           24m   stripe-s-04-11-2026      etest15/stripe-s-04-11-2026:1             app=stripe-s-04-11-2026
 
-NAMESPACE                    NAME                           TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                      AGE     SELECTOR
-default                      service/kubernetes             ClusterIP      10.43.0.1       <none>           443/TCP                      11m     <none>
-kube-system                  service/kube-dns               ClusterIP      10.43.0.10      <none>           53/UDP,53/TCP,9153/TCP       11m     k8s-app=kube-dns
-kube-system                  service/metrics-server         ClusterIP      10.43.154.64    <none>           443/TCP                      11m     k8s-app=metrics-server
-kube-system                  service/traefik                LoadBalancer   10.43.222.117   172.26.141.177   80:31911/TCP,443:30575/TCP   10m     app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik
-mlops-s-04-11-2026           service/nginx-s-04-11-2026     ClusterIP      10.43.247.253   <none>           80/TCP                       9m33s   app=nginx-s-04-11-2026
-mlops-s-04-11-2026           service/podinfo-s-04-11-2026   ClusterIP      10.43.24.73     <none>           9898/TCP                     9m33s   app=podinfo-s-04-11-2026
-mlops-s-04-11-2026           service/stripe-s-04-11-2026    ClusterIP      10.43.73.23     <none>           4242/TCP                     9m33s   app=stripe-s-04-11-2026
-observability-s-04-11-2026   service/netdata-s-04-11-2026   ClusterIP      10.43.217.146   <none>           19999/TCP                    9m32s   app=netdata-s-04-11-2026
-preprod-s-04-11-2026         service/nginx-s-04-11-2026     ClusterIP      10.43.38.36     <none>           80/TCP                       9m32s   app=nginx-s-04-11-2026
-preprod-s-04-11-2026         service/podinfo-s-04-11-2026   ClusterIP      10.43.239.0     <none>           9898/TCP                     9m32s   app=podinfo-s-04-11-2026
-preprod-s-04-11-2026         service/stripe-s-04-11-2026    ClusterIP      10.43.153.54    <none>           4242/TCP                     9m32s   app=stripe-s-04-11-2026
-prod-s-04-11-2026            service/nginx-s-04-11-2026     ClusterIP      10.43.22.158    <none>           80/TCP                       9m32s   app=nginx-s-04-11-2026
-prod-s-04-11-2026            service/podinfo-s-04-11-2026   ClusterIP      10.43.113.133   <none>           9898/TCP                     9m32s   app=podinfo-s-04-11-2026
-prod-s-04-11-2026            service/stripe-s-04-11-2026    ClusterIP      10.43.147.246   <none>           4242/TCP                     9m32s   app=stripe-s-04-11-2026
+NAMESPACE                    NAME                           TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                      AGE   SELECTOR
+default                      service/kubernetes             ClusterIP      10.43.0.1       <none>           443/TCP                      26m   <none>
+kube-system                  service/kube-dns               ClusterIP      10.43.0.10      <none>           53/UDP,53/TCP,9153/TCP       26m   k8s-app=kube-dns
+kube-system                  service/metrics-server         ClusterIP      10.43.154.64    <none>           443/TCP                      26m   k8s-app=metrics-server
+kube-system                  service/traefik                LoadBalancer   10.43.222.117   172.26.141.177   80:31911/TCP,443:30575/TCP   26m   app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik
+mlops-s-04-11-2026           service/nginx-s-04-11-2026     ClusterIP      10.43.247.253   <none>           80/TCP                       24m   app=nginx-s-04-11-2026
+mlops-s-04-11-2026           service/podinfo-s-04-11-2026   ClusterIP      10.43.24.73     <none>           9898/TCP                     24m   app=podinfo-s-04-11-2026
+mlops-s-04-11-2026           service/stripe-s-04-11-2026    ClusterIP      10.43.73.23     <none>           4242/TCP                     24m   app=stripe-s-04-11-2026
+observability-s-04-11-2026   service/netdata-s-04-11-2026   ClusterIP      10.43.217.146   <none>           19999/TCP                    24m   app=netdata-s-04-11-2026
+preprod-s-04-11-2026         service/nginx-s-04-11-2026     ClusterIP      10.43.38.36     <none>           80/TCP                       24m   app=nginx-s-04-11-2026
+preprod-s-04-11-2026         service/podinfo-s-04-11-2026   ClusterIP      10.43.239.0     <none>           9898/TCP                     24m   app=podinfo-s-04-11-2026
+preprod-s-04-11-2026         service/stripe-s-04-11-2026    ClusterIP      10.43.153.54    <none>           4242/TCP                     24m   app=stripe-s-04-11-2026
+prod-s-04-11-2026            service/nginx-s-04-11-2026     ClusterIP      10.43.22.158    <none>           80/TCP                       24m   app=nginx-s-04-11-2026
+prod-s-04-11-2026            service/podinfo-s-04-11-2026   ClusterIP      10.43.113.133   <none>           9898/TCP                     24m   app=podinfo-s-04-11-2026
+prod-s-04-11-2026            service/stripe-s-04-11-2026    ClusterIP      10.43.147.246   <none>           4242/TCP                     24m   app=stripe-s-04-11-2026
 
-NAMESPACE                    NAME                                                  CLASS     HOSTS                                                                ADDRESS          PORTS   AGE
-mlops-s-04-11-2026           ingress.networking.k8s.io/applications-s-04-11-2026   traefik   stripe-mlops-s-04-11-2026.test,podinfo-mlops-s-04-11-2026.test       172.26.141.177   80      9m33s
-observability-s-04-11-2026   ingress.networking.k8s.io/netdata-s-04-11-2026        traefik   netdata-s-04-11-2026.test                                            172.26.141.177   80      9m32s
-preprod-s-04-11-2026         ingress.networking.k8s.io/applications-s-04-11-2026   traefik   stripe-preprod-s-04-11-2026.test,podinfo-preprod-s-04-11-2026.test   172.26.141.177   80      9m32s
-prod-s-04-11-2026            ingress.networking.k8s.io/applications-s-04-11-2026   traefik   stripe-prod-s-04-11-2026.test,podinfo-prod-s-04-11-2026.test         172.26.141.177   80      9m32s
+NAMESPACE                    NAME                                                  CLASS     HOSTS                                                                                                      ADDRESS          PORTS   AGE
+mlops-s-04-11-2026           ingress.networking.k8s.io/applications-s-04-11-2026   traefik   stripe-mlops-s-04-11-2026.172-26-141-177.sslip.io,podinfo-mlops-s-04-11-2026.172-26-141-177.sslip.io       172.26.141.177   80      24m
+observability-s-04-11-2026   ingress.networking.k8s.io/netdata-s-04-11-2026        traefik   netdata-s-04-11-2026.172-26-141-177.sslip.io                                                               172.26.141.177   80      24m
+preprod-s-04-11-2026         ingress.networking.k8s.io/applications-s-04-11-2026   traefik   stripe-preprod-s-04-11-2026.172-26-141-177.sslip.io,podinfo-preprod-s-04-11-2026.172-26-141-177.sslip.io   172.26.141.177   80      24m
+prod-s-04-11-2026            ingress.networking.k8s.io/applications-s-04-11-2026   traefik   stripe-prod-s-04-11-2026.172-26-141-177.sslip.io,podinfo-prod-s-04-11-2026.172-26-141-177.sslip.io         172.26.141.177   80      24m
 
 NAMESPACE              NAME                                                       REFERENCE                         TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
-mlops-s-04-11-2026     horizontalpodautoscaler.autoscaling/nginx-s-04-11-2026     Deployment/nginx-s-04-11-2026     cpu: 4%/60%   3         20        3          9m33s
-mlops-s-04-11-2026     horizontalpodautoscaler.autoscaling/podinfo-s-04-11-2026   Deployment/podinfo-s-04-11-2026   cpu: 4%/60%   3         20        3          9m33s
-mlops-s-04-11-2026     horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026    Deployment/stripe-s-04-11-2026    cpu: 2%/60%   3         20        3          9m33s
-preprod-s-04-11-2026   horizontalpodautoscaler.autoscaling/nginx-s-04-11-2026     Deployment/nginx-s-04-11-2026     cpu: 4%/60%   3         20        3          9m32s
-preprod-s-04-11-2026   horizontalpodautoscaler.autoscaling/podinfo-s-04-11-2026   Deployment/podinfo-s-04-11-2026   cpu: 4%/60%   3         20        3          9m32s
-preprod-s-04-11-2026   horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026    Deployment/stripe-s-04-11-2026    cpu: 2%/60%   3         20        3          9m32s
-prod-s-04-11-2026      horizontalpodautoscaler.autoscaling/nginx-s-04-11-2026     Deployment/nginx-s-04-11-2026     cpu: 4%/60%   3         20        3          9m32s
-prod-s-04-11-2026      horizontalpodautoscaler.autoscaling/podinfo-s-04-11-2026   Deployment/podinfo-s-04-11-2026   cpu: 4%/60%   3         20        3          9m32s
-prod-s-04-11-2026      horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026    Deployment/stripe-s-04-11-2026    cpu: 2%/60%   3         20        3          9m32s
+mlops-s-04-11-2026     horizontalpodautoscaler.autoscaling/nginx-s-04-11-2026     Deployment/nginx-s-04-11-2026     cpu: 4%/60%   3         20        3          24m
+mlops-s-04-11-2026     horizontalpodautoscaler.autoscaling/podinfo-s-04-11-2026   Deployment/podinfo-s-04-11-2026   cpu: 4%/60%   3         20        3          24m
+mlops-s-04-11-2026     horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026    Deployment/stripe-s-04-11-2026    cpu: 2%/60%   3         20        3          24m
+preprod-s-04-11-2026   horizontalpodautoscaler.autoscaling/nginx-s-04-11-2026     Deployment/nginx-s-04-11-2026     cpu: 4%/60%   3         20        3          24m
+preprod-s-04-11-2026   horizontalpodautoscaler.autoscaling/podinfo-s-04-11-2026   Deployment/podinfo-s-04-11-2026   cpu: 2%/60%   3         20        3          24m
+preprod-s-04-11-2026   horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026    Deployment/stripe-s-04-11-2026    cpu: 2%/60%   3         20        3          24m
+prod-s-04-11-2026      horizontalpodautoscaler.autoscaling/nginx-s-04-11-2026     Deployment/nginx-s-04-11-2026     cpu: 4%/60%   3         20        3          24m
+prod-s-04-11-2026      horizontalpodautoscaler.autoscaling/podinfo-s-04-11-2026   Deployment/podinfo-s-04-11-2026   cpu: 4%/60%   3         20        3          24m
+prod-s-04-11-2026      horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026    Deployment/stripe-s-04-11-2026    cpu: 2%/60%   3         20        3          24m
 
 NAMESPACE              NAME                                                     POD-SELECTOR   AGE
-mlops-s-04-11-2026     networkpolicy.networking.k8s.io/isolation-s-04-11-2026   <none>         9m33s
-preprod-s-04-11-2026   networkpolicy.networking.k8s.io/isolation-s-04-11-2026   <none>         9m32s
-prod-s-04-11-2026      networkpolicy.networking.k8s.io/isolation-s-04-11-2026   <none>         9m32s
+mlops-s-04-11-2026     networkpolicy.networking.k8s.io/isolation-s-04-11-2026   <none>         24m
+preprod-s-04-11-2026   networkpolicy.networking.k8s.io/isolation-s-04-11-2026   <none>         24m
+prod-s-04-11-2026      networkpolicy.networking.k8s.io/isolation-s-04-11-2026   <none>         24m
 
 NAMESPACE              NAME                               REQUEST                                                        LIMIT   AGE
-mlops-s-04-11-2026     resourcequota/quota-s-04-11-2026   pods: 9/70, requests.cpu: 300m/4, requests.memory: 432Mi/5Gi           9m33s
-preprod-s-04-11-2026   resourcequota/quota-s-04-11-2026   pods: 9/70, requests.cpu: 300m/4, requests.memory: 432Mi/5Gi           9m32s
-prod-s-04-11-2026      resourcequota/quota-s-04-11-2026   pods: 9/70, requests.cpu: 300m/4, requests.memory: 432Mi/5Gi           9m32s
+mlops-s-04-11-2026     resourcequota/quota-s-04-11-2026   pods: 9/70, requests.cpu: 300m/4, requests.memory: 432Mi/5Gi           24m
+preprod-s-04-11-2026   resourcequota/quota-s-04-11-2026   pods: 9/70, requests.cpu: 300m/4, requests.memory: 432Mi/5Gi           24m
+prod-s-04-11-2026      resourcequota/quota-s-04-11-2026   pods: 9/70, requests.cpu: 300m/4, requests.memory: 432Mi/5Gi           24m

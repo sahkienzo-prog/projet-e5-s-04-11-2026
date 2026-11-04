@@ -1,0 +1,12 @@
+namespace/mlops-s-04-11-2026 unchanged
+Warning: resource secrets/stripe-s-04-11-2026 is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+secret/stripe-s-04-11-2026 configured
+secret/stripe-s-04-11-2026 not labeled
+namespace/preprod-s-04-11-2026 unchanged
+Warning: resource secrets/stripe-s-04-11-2026 is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+secret/stripe-s-04-11-2026 configured
+secret/stripe-s-04-11-2026 not labeled
+namespace/prod-s-04-11-2026 unchanged
+Warning: resource secrets/stripe-s-04-11-2026 is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+secret/stripe-s-04-11-2026 configured
+secret/stripe-s-04-11-2026 not labeled

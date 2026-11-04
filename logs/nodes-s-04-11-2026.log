@@ -1,2 +1,2 @@
 NAME              STATUS   ROLES           AGE   VERSION        INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION              CONTAINER-RUNTIME
-e5-s-04-11-2026   Ready    control-plane   11m   v1.36.5+k3s1   172.26.141.177   <none>        Ubuntu 24.04.5 LTS   6.8.0-147-generic (amd64)   containerd://2.3.4-k3s1.36
+e5-s-04-11-2026   Ready    control-plane   26m   v1.36.5+k3s1   172.26.141.177   <none>        Ubuntu 24.04.5 LTS   6.8.0-147-generic (amd64)   containerd://2.3.4-k3s1.36

@@ -15,3 +15,5 @@ Multipass : https://canonical.com/multipass/docs/
 Stripe test : https://docs.stripe.com/testing
 
 Les commentaires présents dans les sources originales ne sont pas des commentaires de configuration. Les fichiers de configuration et scripts du projet ne contiennent pas de commentaires ajoutés.
+
+Version corrective Netdata : https://github.com/netdata/netdata/releases/tag/v2.12.2

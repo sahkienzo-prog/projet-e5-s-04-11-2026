@@ -5,7 +5,7 @@
 <text x="45" y="45" font-size="26" font-weight="bold">Projet E5 de Sahki Enzo</text>
 <text x="45" y="75" font-size="16">K3s sur une VM Multipass Ubuntu 24.04 · empreinte s-04-11-2026</text>
 <rect x="45" y="110" width="240" height="90" rx="10" fill="#dbeafe" stroke="#2563eb"/>
-<text x="68" y="145" font-size="20">Poste Windows</text><text x="68" y="173" font-size="15">Navigateur et fichier hosts</text>
+<text x="68" y="145" font-size="20">Poste Windows</text><text x="68" y="173" font-size="15">Navigateur et DNS sslip.io</text>
 <path d="M285 155 H400" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
 <text x="320" y="142" font-size="15">HTTP</text>
 <rect x="410" y="110" width="260" height="90" rx="10" fill="#dbeafe" stroke="#2563eb"/>

@@ -1,0 +1,36 @@
+NAMESPACE                    NAME                                      READY   STATUS      RESTARTS      AGE   IP            NODE              NOMINATED NODE   READINESS GATES
+kube-system                  coredns-7cfb7bc9c7-vk2wx                  1/1     Running     0             26m   10.42.0.6     e5-s-04-11-2026   <none>           <none>
+kube-system                  helm-install-traefik-crd-bxd5z            0/1     Completed   0             26m   10.42.0.3     e5-s-04-11-2026   <none>           <none>
+kube-system                  helm-install-traefik-gjb4l                0/1     Completed   1 (26m ago)   26m   10.42.0.2     e5-s-04-11-2026   <none>           <none>
+kube-system                  local-path-provisioner-77b9867795-nlh79   1/1     Running     0             26m   10.42.0.4     e5-s-04-11-2026   <none>           <none>
+kube-system                  metrics-server-6dc596dfb8-qrzvs           1/1     Running     0             26m   10.42.0.5     e5-s-04-11-2026   <none>           <none>
+kube-system                  svclb-traefik-8f857d93-7xqnp              2/2     Running     0             26m   10.42.0.7     e5-s-04-11-2026   <none>           <none>
+kube-system                  traefik-7c8544f77-tnqqv                   1/1     Running     0             26m   10.42.0.8     e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           nginx-s-04-11-2026-788d9d895c-56qdb       1/1     Running     0             81s   10.42.0.131   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           nginx-s-04-11-2026-788d9d895c-j2c7r       1/1     Running     0             67s   10.42.0.145   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           nginx-s-04-11-2026-788d9d895c-n6bss       1/1     Running     0             56s   10.42.0.154   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           podinfo-s-04-11-2026-64b46bbcf7-jlqcg     1/1     Running     0             69s   10.42.0.139   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           podinfo-s-04-11-2026-64b46bbcf7-q52ts     1/1     Running     0             81s   10.42.0.130   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           podinfo-s-04-11-2026-64b46bbcf7-wq2nh     1/1     Running     0             58s   10.42.0.151   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           stripe-s-04-11-2026-65cc75549-4qpmq       1/1     Running     0             81s   10.42.0.129   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           stripe-s-04-11-2026-65cc75549-cptn2       1/1     Running     0             69s   10.42.0.140   e5-s-04-11-2026   <none>           <none>
+mlops-s-04-11-2026           stripe-s-04-11-2026-65cc75549-gkwpv       1/1     Running     0             58s   10.42.0.149   e5-s-04-11-2026   <none>           <none>
+observability-s-04-11-2026   netdata-s-04-11-2026-f5df9fb67-4b5fj      1/1     Running     0             24m   10.42.0.34    e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         nginx-s-04-11-2026-788d9d895c-6tqwr       1/1     Running     0             69s   10.42.0.138   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         nginx-s-04-11-2026-788d9d895c-cf2m5       1/1     Running     0             58s   10.42.0.148   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         nginx-s-04-11-2026-788d9d895c-wxr7j       1/1     Running     0             81s   10.42.0.134   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         podinfo-s-04-11-2026-64b46bbcf7-5z6x9     1/1     Running     0             81s   10.42.0.133   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         podinfo-s-04-11-2026-64b46bbcf7-7m9vh     1/1     Running     0             57s   10.42.0.153   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         podinfo-s-04-11-2026-64b46bbcf7-jtc9w     1/1     Running     0             69s   10.42.0.143   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         stripe-s-04-11-2026-86bc75b467-cstkz      1/1     Running     0             81s   10.42.0.132   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         stripe-s-04-11-2026-86bc75b467-dgxxf      1/1     Running     0             56s   10.42.0.155   e5-s-04-11-2026   <none>           <none>
+preprod-s-04-11-2026         stripe-s-04-11-2026-86bc75b467-mlbtd      1/1     Running     0             67s   10.42.0.146   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            nginx-s-04-11-2026-788d9d895c-2qhrc       1/1     Running     0             80s   10.42.0.137   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            nginx-s-04-11-2026-788d9d895c-6vx8g       1/1     Running     0             58s   10.42.0.147   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            nginx-s-04-11-2026-788d9d895c-t65d8       1/1     Running     0             69s   10.42.0.142   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            podinfo-s-04-11-2026-64b46bbcf7-65t87     1/1     Running     0             68s   10.42.0.144   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            podinfo-s-04-11-2026-64b46bbcf7-6m9r7     1/1     Running     0             80s   10.42.0.136   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            podinfo-s-04-11-2026-64b46bbcf7-g8jxb     1/1     Running     0             57s   10.42.0.152   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            stripe-s-04-11-2026-64cc8c58bb-6ccx8      1/1     Running     0             80s   10.42.0.135   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            stripe-s-04-11-2026-64cc8c58bb-dl9mt      1/1     Running     0             69s   10.42.0.141   e5-s-04-11-2026   <none>           <none>
+prod-s-04-11-2026            stripe-s-04-11-2026-64cc8c58bb-zxbvd      1/1     Running     0             58s   10.42.0.150   e5-s-04-11-2026   <none>           <none>

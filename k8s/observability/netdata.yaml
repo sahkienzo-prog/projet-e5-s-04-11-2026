@@ -29,7 +29,7 @@ spec:
       hostPID: true
       containers:
       - name: netdata-s-04-11-2026
-        image: netdata/netdata:v2.6.3
+        image: netdata/netdata:v2.12.2
         ports:
         - containerPort: 19999
         resources:

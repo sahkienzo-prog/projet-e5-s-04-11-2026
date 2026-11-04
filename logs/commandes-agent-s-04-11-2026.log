@@ -34,3 +34,17 @@ sudo docker login
 
 Les trois scripts de charge ont ete lances en parallele puis attendus avec wait.
 Les commandes de construction et d'application detaillees sont lisibles dans les scripts versionnes.
+
+Etapes finales
+Connexion interactive Docker Hub terminee par l utilisateur.
+Images tagees et poussees vers etest15 pour stripe, podinfo et nginx.
+bash scripts/04-secrets-s-04-11-2026.sh
+bash scripts/10-adresses-s-04-11-2026.sh
+bash scripts/06-dockerhub-s-04-11-2026.sh
+bash scripts/09-verifier-s-04-11-2026.sh
+bash scripts/08-preuves-s-04-11-2026.sh
+Validation Bash : bash -n sur les scripts .sh.
+Validation Kubernetes : kubectl apply --dry-run=server sur les quatre dossiers k8s.
+Appels Stripe de test : creation produit et prix de 100 centimes EUR, verification de la session Checkout.
+Test navigateur : carte fictive 4242, nom Test E5, e5-test@example.com, aucune donnee de carte reelle.
+Validation des trois images Docker Hub par lecture anonyme des manifests.

@@ -43,6 +43,7 @@ bash scripts/03-publier-s-04-11-2026.sh
 bash scripts/04-secrets-s-04-11-2026.sh
 bash scripts/05-deployer-s-04-11-2026.sh
 bash scripts/06-dockerhub-s-04-11-2026.sh
+bash scripts/10-adresses-s-04-11-2026.sh
 bash scripts/09-verifier-s-04-11-2026.sh
 bash scripts/07-charge-s-04-11-2026.sh mlops stripe
 bash scripts/07-charge-s-04-11-2026.sh mlops podinfo
@@ -66,18 +67,18 @@ Accès depuis Windows
 
 La VM créée possède actuellement l’adresse 172.26.141.177. Vérifier avec multipass info e5-s-04-11-2026, car elle peut changer après un redémarrage.
 
-Ajouter les lignes de ACCES-WINDOWS.txt au fichier C:\Windows\System32\drivers\etc\hosts avec un éditeur lancé en administrateur. Ouvrir ensuite les adresses suivantes :
+Les adresses sslip.io pointent directement vers la VM. Aucune modification du fichier hosts n’est nécessaire. Ouvrir les adresses suivantes :
 
-- http://stripe-mlops-s-04-11-2026.test
-- http://podinfo-mlops-s-04-11-2026.test
-- http://netdata-s-04-11-2026.test
+- http://stripe-mlops-s-04-11-2026.172-26-141-177.sslip.io
+- http://podinfo-mlops-s-04-11-2026.172-26-141-177.sslip.io
+- http://netdata-s-04-11-2026.172-26-141-177.sslip.io
 
 Remplacer mlops par preprod ou prod pour les autres environnements. Ces adresses utilisent le réseau local de la VM, pas une publication sur Internet. Nginx n’a pas d’Ingress et n’est pas accessible par une adresse externe.
 
-Sans modifier le fichier hosts, tester dans PowerShell :
+Tester aussi dans PowerShell :
 
 ```powershell
-curl.exe -H 'Host: podinfo-mlops-s-04-11-2026.test' http://172.26.141.177
+curl.exe -H 'Host: podinfo-mlops-s-04-11-2026.172-26-141-177.sslip.io' http://172.26.141.177
 ```
 
 Versionnement et remise
@@ -85,7 +86,7 @@ Versionnement et remise
 
 Le dépôt Git et ses commits sont dans ce dossier, y compris le dossier caché .git. Ne pas supprimer .git avant de remettre le projet. Le dépôt est local ; aucun dépôt GitHub distant n’est créé automatiquement.
 
-Ne pas envoyer .env, le dossier secrets, ni les identifiants Docker. Avant d’ajouter de nouveaux logs, vérifier qu’ils ne contiennent pas de secrets. Consulter RESULTATS.md avant de rendre le rapport : le paiement et Docker Hub doivent être confirmés avec des preuves réelles.
+Ne pas envoyer .env, le dossier secrets, ni les identifiants Docker. Avant d’ajouter de nouveaux logs, vérifier qu’ils ne contiennent pas de secrets. Le paiement Stripe de test et les trois images publiques Docker Hub ont été vérifiés. Les détails et les preuves se trouvent dans RESULTATS.md. Relire le dossier avant la remise individuelle.
 
 Après une étape terminée :
 

@@ -3,7 +3,7 @@ Namespace:              preprod-s-04-11-2026
 CreationTimestamp:      Wed, 04 Nov 2026 14:32:07 +0100
 Labels:                 empreinte=s-04-11-2026
                         nom=sahki
-Annotations:            deployment.kubernetes.io/revision: 1
+Annotations:            deployment.kubernetes.io/revision: 2
 Selector:               app=nginx-s-04-11-2026
 Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
 StrategyType:           RollingUpdate
@@ -15,7 +15,7 @@ Pod Template:
            nom=sahki
   Containers:
    nginx-s-04-11-2026:
-    Image:      nginx-s-04-11-2026:1
+    Image:      etest15/nginx-s-04-11-2026:1
     Port:       80/TCP
     Host Port:  0/TCP
     Limits:
@@ -36,8 +36,8 @@ Conditions:
   ----           ------  ------
   Available      True    MinimumReplicasAvailable
   Progressing    True    NewReplicaSetAvailable
-OldReplicaSets:  <none>
-NewReplicaSet:   nginx-s-04-11-2026-7bff8f6ff9 (3/3 replicas created)
+OldReplicaSets:  nginx-s-04-11-2026-7bff8f6ff9 (0/0 replicas created)
+NewReplicaSet:   nginx-s-04-11-2026-788d9d895c (3/3 replicas created)
 
 
 Name:                   podinfo-s-04-11-2026
@@ -45,7 +45,7 @@ Namespace:              preprod-s-04-11-2026
 CreationTimestamp:      Wed, 04 Nov 2026 14:32:07 +0100
 Labels:                 empreinte=s-04-11-2026
                         nom=sahki
-Annotations:            deployment.kubernetes.io/revision: 1
+Annotations:            deployment.kubernetes.io/revision: 2
 Selector:               app=podinfo-s-04-11-2026
 Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
 StrategyType:           RollingUpdate
@@ -57,7 +57,7 @@ Pod Template:
            nom=sahki
   Containers:
    podinfo-s-04-11-2026:
-    Image:      podinfo-s-04-11-2026:1
+    Image:      etest15/podinfo-s-04-11-2026:1
     Port:       9898/TCP
     Host Port:  0/TCP
     Limits:
@@ -78,8 +78,8 @@ Conditions:
   ----           ------  ------
   Available      True    MinimumReplicasAvailable
   Progressing    True    NewReplicaSetAvailable
-OldReplicaSets:  <none>
-NewReplicaSet:   podinfo-s-04-11-2026-775d4cbc6c (3/3 replicas created)
+OldReplicaSets:  podinfo-s-04-11-2026-775d4cbc6c (0/0 replicas created)
+NewReplicaSet:   podinfo-s-04-11-2026-64b46bbcf7 (3/3 replicas created)
 
 
 Name:                   stripe-s-04-11-2026
@@ -87,19 +87,20 @@ Namespace:              preprod-s-04-11-2026
 CreationTimestamp:      Wed, 04 Nov 2026 14:32:07 +0100
 Labels:                 empreinte=s-04-11-2026
                         nom=sahki
-Annotations:            deployment.kubernetes.io/revision: 1
+Annotations:            deployment.kubernetes.io/revision: 4
 Selector:               app=stripe-s-04-11-2026
 Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
 StrategyType:           RollingUpdate
 MinReadySeconds:        0
 RollingUpdateStrategy:  25% max unavailable, 25% max surge
 Pod Template:
-  Labels:  app=stripe-s-04-11-2026
-           empreinte=s-04-11-2026
-           nom=sahki
+  Labels:       app=stripe-s-04-11-2026
+                empreinte=s-04-11-2026
+                nom=sahki
+  Annotations:  kubectl.kubernetes.io/restartedAt: 2026-11-04T14:46:14+01:00
   Containers:
    stripe-s-04-11-2026:
-    Image:      stripe-s-04-11-2026:1
+    Image:      etest15/stripe-s-04-11-2026:1
     Port:       4242/TCP
     Host Port:  0/TCP
     Limits:
@@ -113,7 +114,7 @@ Pod Template:
     Environment Variables from:
       stripe-s-04-11-2026  Secret  Optional: false
     Environment:
-      DOMAIN:      http://stripe-preprod-s-04-11-2026.test
+      DOMAIN:      http://stripe-preprod-s-04-11-2026.172-26-141-177.sslip.io
     Mounts:        <none>
   Volumes:         <none>
   Node-Selectors:  <none>
@@ -123,8 +124,8 @@ Conditions:
   ----           ------  ------
   Available      True    MinimumReplicasAvailable
   Progressing    True    NewReplicaSetAvailable
-OldReplicaSets:  <none>
-NewReplicaSet:   stripe-s-04-11-2026-7845d8d987 (3/3 replicas created)
+OldReplicaSets:  stripe-s-04-11-2026-7845d8d987 (0/0 replicas created), stripe-s-04-11-2026-744bbd7fd4 (0/0 replicas created), stripe-s-04-11-2026-7f9d4644fc (0/0 replicas created)
+NewReplicaSet:   stripe-s-04-11-2026-86bc75b467 (3/3 replicas created)
 
 
 Name:                                                  nginx-s-04-11-2026
@@ -152,11 +153,11 @@ Behavior:
       - Type: Percent  Value: 100  Period: 15 seconds
 Deployment pods:       3 current / 3 desired
 Conditions:
-  Type            Status  Reason            Message
-  ----            ------  ------            -------
-  AbleToScale     True    ReadyForNewScale  recommended size matches current size
-  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
-  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+  Type            Status  Reason               Message
+  ----            ------  ------               -------
+  AbleToScale     True    ScaleDownStabilized  recent recommendations were higher than current one, applying the highest recent recommendation
+  ScalingActive   True    ValidMetricFound     the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas       the desired replica count is less than the minimum replica count
 
 
 Name:                                                  podinfo-s-04-11-2026
@@ -167,7 +168,7 @@ Annotations:                                           <none>
 CreationTimestamp:                                     Wed, 04 Nov 2026 14:32:07 +0100
 Reference:                                             Deployment/podinfo-s-04-11-2026
 Metrics:                                               ( current / target )
-  resource cpu on pods  (as a percentage of request):  4% (1m) / 60%
+  resource cpu on pods  (as a percentage of request):  2% (0) / 60%
 Min replicas:                                          3
 Max replicas:                                          20
 Behavior:
@@ -184,11 +185,11 @@ Behavior:
       - Type: Percent  Value: 100  Period: 15 seconds
 Deployment pods:       3 current / 3 desired
 Conditions:
-  Type            Status  Reason            Message
-  ----            ------  ------            -------
-  AbleToScale     True    ReadyForNewScale  recommended size matches current size
-  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
-  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+  Type            Status  Reason               Message
+  ----            ------  ------               -------
+  AbleToScale     True    ScaleDownStabilized  recent recommendations were higher than current one, applying the highest recent recommendation
+  ScalingActive   True    ValidMetricFound     the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas       the desired replica count is less than the minimum replica count
 
 
 Name:                                                  stripe-s-04-11-2026
@@ -216,11 +217,11 @@ Behavior:
       - Type: Percent  Value: 100  Period: 15 seconds
 Deployment pods:       3 current / 3 desired
 Conditions:
-  Type            Status  Reason            Message
-  ----            ------  ------            -------
-  AbleToScale     True    ReadyForNewScale  recommended size matches current size
-  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
-  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+  Type            Status  Reason               Message
+  ----            ------  ------               -------
+  AbleToScale     True    ScaleDownStabilized  recent recommendations were higher than current one, applying the highest recent recommendation
+  ScalingActive   True    ValidMetricFound     the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas       the desired replica count is less than the minimum replica count
 
 
 Name:         isolation-s-04-11-2026

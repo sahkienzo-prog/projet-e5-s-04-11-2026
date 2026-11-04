@@ -1,0 +1,18 @@
+ingress.networking.k8s.io/applications-s-04-11-2026 configured
+deployment.apps/stripe-s-04-11-2026 configured
+service/stripe-s-04-11-2026 unchanged
+horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026 unchanged
+ingress.networking.k8s.io/applications-s-04-11-2026 configured
+deployment.apps/stripe-s-04-11-2026 configured
+service/stripe-s-04-11-2026 unchanged
+horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026 unchanged
+ingress.networking.k8s.io/applications-s-04-11-2026 configured
+deployment.apps/stripe-s-04-11-2026 configured
+service/stripe-s-04-11-2026 unchanged
+horizontalpodautoscaler.autoscaling/stripe-s-04-11-2026 unchanged
+namespace/observability-s-04-11-2026 unchanged
+deployment.apps/netdata-s-04-11-2026 unchanged
+service/netdata-s-04-11-2026 unchanged
+ingress.networking.k8s.io/netdata-s-04-11-2026 configured
+Adresse de la VM : 172.26.141.177
+Suffixe des adresses : .172-26-141-177.sslip.io

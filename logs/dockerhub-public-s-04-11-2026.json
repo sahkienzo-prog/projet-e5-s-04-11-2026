@@ -1,0 +1,20 @@
+[
+  {
+    "image": "etest15/stripe-s-04-11-2026:1",
+    "anonymous_pull": true,
+    "http_status": 200,
+    "digest": "sha256:f83deb5743ab627e761864a59dfad76b066e58bc56ecafecde39476cf2f4bf04"
+  },
+  {
+    "image": "etest15/podinfo-s-04-11-2026:1",
+    "anonymous_pull": true,
+    "http_status": 200,
+    "digest": "sha256:2ff7e09117596b13739e85bde01c8a33d56265013518910ab681df0fbea13b54"
+  },
+  {
+    "image": "etest15/nginx-s-04-11-2026:1",
+    "anonymous_pull": true,
+    "http_status": 200,
+    "digest": "sha256:0dcc88822d45581e65ae329f8be769762bf628d3b2bb7d2a077d4aa5c98b30e3"
+  }
+]

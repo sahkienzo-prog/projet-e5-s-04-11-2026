@@ -12,7 +12,7 @@
             "claim_id":null
         }],
     "alarms":{
-        "normal":213,
+        "normal":842,
         "warning":0,
         "critical":0
     },
@@ -286,15 +286,15 @@
     "https-enabled":true,
     "buildinfo":"Netdata Cloud|Stream Compression|Machine Learning|allocator|dbengine|Native HTTPS|TLS Host Verification|zlib|protobuf|JSON-C|libcrypto|libyaml|libmnl|apps|cgroup Network Tracking|debugfs|IPMI|NETWORK-VIEWER|SYSTEMD-JOURNAL|perf|slabinfo|MongoDB|Prometheus Remote Write",
     "release-channel":"nightly",
-    "notification-methods":null,
+    "notification-methods":"SEND_EMAIL",
     "exporting-enabled":false,
     "exporting-connectors":"",
     "allmetrics-prometheus-used":0,
     "allmetrics-shell-used":0,
     "allmetrics-json-used":0,
     "dashboard-used":0,
-    "charts-count":0,
-    "metrics-count":0,
+    "charts-count":3425,
+    "metrics-count":7187,
     "ml-info":{
         "version":1,
         "enabled":true,

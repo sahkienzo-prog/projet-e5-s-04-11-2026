@@ -1,0 +1,15 @@
+NAMESPACE                    NAME                     READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS               IMAGES                                    SELECTOR
+kube-system                  coredns                  1/1     1            1           28m   coredns                  rancher/mirrored-coredns-coredns:1.14.7   k8s-app=kube-dns
+kube-system                  local-path-provisioner   1/1     1            1           28m   local-path-provisioner   rancher/local-path-provisioner:v0.0.37    app=local-path-provisioner
+kube-system                  metrics-server           1/1     1            1           28m   metrics-server           rancher/mirrored-metrics-server:v0.9.0    k8s-app=metrics-server
+kube-system                  traefik                  1/1     1            1           28m   traefik                  rancher/mirrored-library-traefik:3.7.13   app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik
+mlops-s-04-11-2026           nginx-s-04-11-2026       3/3     3            3           26m   nginx-s-04-11-2026       etest15/nginx-s-04-11-2026:1              app=nginx-s-04-11-2026
+mlops-s-04-11-2026           podinfo-s-04-11-2026     3/3     3            3           26m   podinfo-s-04-11-2026     etest15/podinfo-s-04-11-2026:1            app=podinfo-s-04-11-2026
+mlops-s-04-11-2026           stripe-s-04-11-2026      3/3     3            3           26m   stripe-s-04-11-2026      etest15/stripe-s-04-11-2026:1             app=stripe-s-04-11-2026
+observability-s-04-11-2026   netdata-s-04-11-2026     1/1     1            1           26m   netdata-s-04-11-2026     netdata/netdata:v2.12.2                   app=netdata-s-04-11-2026
+preprod-s-04-11-2026         nginx-s-04-11-2026       3/3     3            3           26m   nginx-s-04-11-2026       etest15/nginx-s-04-11-2026:1              app=nginx-s-04-11-2026
+preprod-s-04-11-2026         podinfo-s-04-11-2026     3/3     3            3           26m   podinfo-s-04-11-2026     etest15/podinfo-s-04-11-2026:1            app=podinfo-s-04-11-2026
+preprod-s-04-11-2026         stripe-s-04-11-2026      3/3     3            3           26m   stripe-s-04-11-2026      etest15/stripe-s-04-11-2026:1             app=stripe-s-04-11-2026
+prod-s-04-11-2026            nginx-s-04-11-2026       3/3     3            3           26m   nginx-s-04-11-2026       etest15/nginx-s-04-11-2026:1              app=nginx-s-04-11-2026
+prod-s-04-11-2026            podinfo-s-04-11-2026     3/3     3            3           26m   podinfo-s-04-11-2026     etest15/podinfo-s-04-11-2026:1            app=podinfo-s-04-11-2026
+prod-s-04-11-2026            stripe-s-04-11-2026      3/3     3            3           26m   stripe-s-04-11-2026      etest15/stripe-s-04-11-2026:1             app=stripe-s-04-11-2026
