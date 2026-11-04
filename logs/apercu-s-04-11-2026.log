@@ -1,0 +1,10 @@
+namespace/mlops-s-04-11-2026 created
+secret/stripe-s-04-11-2026 created
+secret/stripe-s-04-11-2026 labeled
+namespace/preprod-s-04-11-2026 created
+secret/stripe-s-04-11-2026 created
+secret/stripe-s-04-11-2026 labeled
+namespace/prod-s-04-11-2026 created
+secret/stripe-s-04-11-2026 created
+secret/stripe-s-04-11-2026 labeled
+Apercu uniquement : le paiement ne fonctionne pas sans les vraies cles de test.

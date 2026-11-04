@@ -1,0 +1,4 @@
+NAME                   REFERENCE                         TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+nginx-s-04-11-2026     Deployment/nginx-s-04-11-2026     cpu: 4%/60%   3         20        3          7m18s
+podinfo-s-04-11-2026   Deployment/podinfo-s-04-11-2026   cpu: 4%/60%   3         20        3          7m18s
+stripe-s-04-11-2026    Deployment/stripe-s-04-11-2026    cpu: 2%/60%   3         20        3          7m18s

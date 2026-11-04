@@ -1,0 +1,10 @@
+{
+  "id": "cs_test_a17G84uEWjjfq8osU2azTupzF5fTihTtBTdaRYdIHetQ4Osu9Hjt2t6zYi",
+  "status": "complete",
+  "payment_status": "paid",
+  "amount_total": 100,
+  "currency": "eur",
+  "payment_intent": "pi_3UY4YxRzPSnzcY1K0q5jGYoI",
+  "livemode": false,
+  "created": 1793800014
+}

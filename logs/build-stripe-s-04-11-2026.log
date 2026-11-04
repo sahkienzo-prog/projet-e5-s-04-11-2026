@@ -1,0 +1,114 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  45.06kB
+Step 1/10 : FROM python:3.12-slim
+3.12-slim: Pulling from library/python
+acca7542dfc7: Pulling fs layer
+6fc242d221a6: Pulling fs layer
+f574edac59d9: Pulling fs layer
+3eb771151506: Pulling fs layer
+acca7542dfc7: Download complete
+3eb771151506: Download complete
+6fc242d221a6: Download complete
+f574edac59d9: Download complete
+5c4e36918e20: Download complete
+bccc6082da9b: Download complete
+3eb771151506: Pull complete
+6fc242d221a6: Pull complete
+acca7542dfc7: Pull complete
+f574edac59d9: Pull complete
+Digest: sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30
+Status: Downloaded newer image for python:3.12-slim
+ ---> b18b261e1b49
+Step 2/10 : WORKDIR /app
+ ---> Running in 1a215ecb446a
+ ---> Removed intermediate container 1a215ecb446a
+ ---> 87b3b8583c03
+Step 3/10 : COPY server/python/requirements.txt requirements.txt
+ ---> 7176c3f752b6
+Step 4/10 : RUN pip install --no-cache-dir -r requirements.txt gunicorn==23.0.0
+ ---> Running in 88d67d9b9af3
+Collecting gunicorn==23.0.0
+  Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting Flask==3.1.2 (from -r requirements.txt (line 1))
+  Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting python-dotenv==0.21.0 (from -r requirements.txt (line 2))
+  Downloading python_dotenv-0.21.0-py3-none-any.whl.metadata (20 kB)
+Collecting stripe==14.2.0 (from -r requirements.txt (line 3))
+  Downloading stripe-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting packaging (from gunicorn==23.0.0)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting blinker>=1.9.0 (from Flask==3.1.2->-r requirements.txt (line 1))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from Flask==3.1.2->-r requirements.txt (line 1))
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.2.0 (from Flask==3.1.2->-r requirements.txt (line 1))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from Flask==3.1.2->-r requirements.txt (line 1))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from Flask==3.1.2->-r requirements.txt (line 1))
+  Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting werkzeug>=3.1.0 (from Flask==3.1.2->-r requirements.txt (line 1))
+  Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+Collecting typing_extensions>=4.5.0 (from stripe==14.2.0->-r requirements.txt (line 3))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting requests>=2.20 (from stripe==14.2.0->-r requirements.txt (line 3))
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.20->stripe==14.2.0->-r requirements.txt (line 3))
+  Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests>=2.20->stripe==14.2.0->-r requirements.txt (line 3))
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.20->stripe==14.2.0->-r requirements.txt (line 3))
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests>=2.20->stripe==14.2.0->-r requirements.txt (line 3))
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+Downloading python_dotenv-0.21.0-py3-none-any.whl (18 kB)
+Downloading stripe-14.2.0-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 102.9 MB/s eta 0:00:00
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Installing collected packages: urllib3, typing_extensions, python-dotenv, packaging, markupsafe, itsdangerous, idna, click, charset_normalizer, certifi, blinker, werkzeug, requests, jinja2, gunicorn, stripe, Flask
+Successfully installed Flask-3.1.2 blinker-1.9.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.0 gunicorn-23.0.0 idna-3.20 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 packaging-26.3 python-dotenv-0.21.0 requests-2.34.2 stripe-14.2.0 typing_extensions-4.16.0 urllib3-2.8.0 werkzeug-3.1.9
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[0m[91m
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+[0m ---> Removed intermediate container 88d67d9b9af3
+ ---> a4fb20e6c6e8
+Step 5/10 : COPY server/python/server.py server.py
+ ---> fdf1790726a1
+Step 6/10 : COPY client/html /app/client
+ ---> a39ebe7c8b86
+Step 7/10 : ENV STATIC_DIR=/app/client
+ ---> Running in 6687eb582efc
+ ---> Removed intermediate container 6687eb582efc
+ ---> d067f496c586
+Step 8/10 : ENV PYTHONUNBUFFERED=1
+ ---> Running in 9c5028b0bbbd
+ ---> Removed intermediate container 9c5028b0bbbd
+ ---> 4a41a68f3ea5
+Step 9/10 : EXPOSE 4242
+ ---> Running in 3b31ac4ad740
+ ---> Removed intermediate container 3b31ac4ad740
+ ---> dec7456f4673
+Step 10/10 : CMD ["gunicorn", "--bind", "0.0.0.0:4242", "--workers", "2", "--access-logfile", "-", "--error-logfile", "-", "server:app"]
+ ---> Running in 735706ee036e
+ ---> Removed intermediate container 735706ee036e
+ ---> f83deb5743ab
+Successfully built f83deb5743ab
+Successfully tagged stripe-s-04-11-2026:1

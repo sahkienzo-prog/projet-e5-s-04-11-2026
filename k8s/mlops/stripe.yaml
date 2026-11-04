@@ -29,7 +29,7 @@ spec:
             name: stripe-s-04-11-2026
         env:
         - name: DOMAIN
-          value: http://stripe-mlops-s-04-11-2026.test
+          value: http://stripe-mlops-s-04-11-2026.172-26-141-177.sslip.io
         resources:
           requests:
             cpu: 50m

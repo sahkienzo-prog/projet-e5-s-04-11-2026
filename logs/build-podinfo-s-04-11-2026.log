@@ -1,0 +1,35 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  2.048kB
+Step 1/1 : FROM stefanprodan/podinfo:6.9.2
+6.9.2: Pulling from stefanprodan/podinfo
+1d2fedfcee11: Pulling fs layer
+fa1ce8234f95: Pulling fs layer
+ac46fcde108e: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+19e6f9ff8ded: Pulling fs layer
+0f393b3ccbf4: Pulling fs layer
+9824c27679d3: Pulling fs layer
+4f4fb700ef54: Download complete
+1d2fedfcee11: Download complete
+9824c27679d3: Download complete
+9824c27679d3: Pull complete
+19e6f9ff8ded: Download complete
+93a29a93c8e2: Download complete
+aaa42ddd5ed2: Download complete
+fa1ce8234f95: Download complete
+ac46fcde108e: Download complete
+4f4fb700ef54: Pull complete
+fa1ce8234f95: Pull complete
+0f393b3ccbf4: Download complete
+0f393b3ccbf4: Pull complete
+19e6f9ff8ded: Pull complete
+ac46fcde108e: Pull complete
+1d2fedfcee11: Pull complete
+Digest: sha256:cab90e04829cdae73199a8402882a4e3ccaf251b8a0d50bdefede0ab3f6371e7
+Status: Downloaded newer image for stefanprodan/podinfo:6.9.2
+ ---> cab90e04829c
+Successfully built cab90e04829c
+Successfully tagged podinfo-s-04-11-2026:1

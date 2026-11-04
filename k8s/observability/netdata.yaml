@@ -92,7 +92,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: netdata-s-04-11-2026.test
+  - host: netdata-s-04-11-2026.172-26-141-177.sslip.io
     http:
       paths:
       - path: /

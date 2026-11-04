@@ -1,0 +1,9 @@
+docker.io/library/stripe s 04 11 2026:1 	saved	
+application/vnd.oci.image.manifest.v1+json sha256:f83deb5743ab627e761864a59dfad76b066e58bc56ecafecde39476cf2f4bf04
+Importing	elapsed: 1.4 s	total:   0.0 B	(0.0 B/s)	
+docker.io/library/podinfo s 04 11 2026:1	saved	
+application/vnd.oci.image.index.v1+json sha256:cab90e04829cdae73199a8402882a4e3ccaf251b8a0d50bdefede0ab3f6371e7
+Importing	elapsed: 0.6 s	total:   0.0 B	(0.0 B/s)	
+docker.io/library/nginx s 04 11 2026:1  	saved	
+application/vnd.oci.image.index.v1+json sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236
+Importing	elapsed: 0.6 s	total:   0.0 B	(0.0 B/s)	

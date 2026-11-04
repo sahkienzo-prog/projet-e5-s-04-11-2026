@@ -1,0 +1,6 @@
+[pod/podinfo-s-04-11-2026-775d4cbc6c-bdtmr/podinfo-s-04-11-2026] {"level":"info","ts":"2026-11-04T13:32:08.652Z","caller":"podinfo/main.go:153","msg":"Starting podinfo","version":"6.9.2","revision":"e86405a8674ecab990d0a389824c7ebbd82973b5","port":"9898"}
+[pod/podinfo-s-04-11-2026-775d4cbc6c-bdtmr/podinfo-s-04-11-2026] {"level":"info","ts":"2026-11-04T13:32:08.652Z","caller":"http/server.go:224","msg":"Starting HTTP Server.","addr":":9898"}
+[pod/podinfo-s-04-11-2026-775d4cbc6c-g4xxc/podinfo-s-04-11-2026] {"level":"info","ts":"2026-11-04T13:32:08.703Z","caller":"podinfo/main.go:153","msg":"Starting podinfo","version":"6.9.2","revision":"e86405a8674ecab990d0a389824c7ebbd82973b5","port":"9898"}
+[pod/podinfo-s-04-11-2026-775d4cbc6c-g4xxc/podinfo-s-04-11-2026] {"level":"info","ts":"2026-11-04T13:32:08.703Z","caller":"http/server.go:224","msg":"Starting HTTP Server.","addr":":9898"}
+[pod/podinfo-s-04-11-2026-775d4cbc6c-wmp4n/podinfo-s-04-11-2026] {"level":"info","ts":"2026-11-04T13:32:08.511Z","caller":"podinfo/main.go:153","msg":"Starting podinfo","version":"6.9.2","revision":"e86405a8674ecab990d0a389824c7ebbd82973b5","port":"9898"}
+[pod/podinfo-s-04-11-2026-775d4cbc6c-wmp4n/podinfo-s-04-11-2026] {"level":"info","ts":"2026-11-04T13:32:08.511Z","caller":"http/server.go:224","msg":"Starting HTTP Server.","addr":":9898"}

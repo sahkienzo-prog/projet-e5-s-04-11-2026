@@ -1,0 +1,245 @@
+Name:                   nginx-s-04-11-2026
+Namespace:              mlops-s-04-11-2026
+CreationTimestamp:      Wed, 04 Nov 2026 14:32:06 +0100
+Labels:                 empreinte=s-04-11-2026
+                        nom=sahki
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=nginx-s-04-11-2026
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=nginx-s-04-11-2026
+           empreinte=s-04-11-2026
+           nom=sahki
+  Containers:
+   nginx-s-04-11-2026:
+    Image:      nginx-s-04-11-2026:1
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     300m
+      memory:  64Mi
+    Requests:
+      cpu:         25m
+      memory:      16Mi
+    Liveness:      http-get http://:80/ delay=20s timeout=1s period=15s #success=1 #failure=3
+    Readiness:     http-get http://:80/ delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   nginx-s-04-11-2026-7bff8f6ff9 (3/3 replicas created)
+
+
+Name:                   podinfo-s-04-11-2026
+Namespace:              mlops-s-04-11-2026
+CreationTimestamp:      Wed, 04 Nov 2026 14:32:06 +0100
+Labels:                 empreinte=s-04-11-2026
+                        nom=sahki
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=podinfo-s-04-11-2026
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=podinfo-s-04-11-2026
+           empreinte=s-04-11-2026
+           nom=sahki
+  Containers:
+   podinfo-s-04-11-2026:
+    Image:      podinfo-s-04-11-2026:1
+    Port:       9898/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     300m
+      memory:  128Mi
+    Requests:
+      cpu:         25m
+      memory:      32Mi
+    Liveness:      http-get http://:9898/ delay=20s timeout=1s period=15s #success=1 #failure=3
+    Readiness:     http-get http://:9898/ delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   podinfo-s-04-11-2026-775d4cbc6c (3/3 replicas created)
+
+
+Name:                   stripe-s-04-11-2026
+Namespace:              mlops-s-04-11-2026
+CreationTimestamp:      Wed, 04 Nov 2026 14:32:06 +0100
+Labels:                 empreinte=s-04-11-2026
+                        nom=sahki
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=stripe-s-04-11-2026
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=stripe-s-04-11-2026
+           empreinte=s-04-11-2026
+           nom=sahki
+  Containers:
+   stripe-s-04-11-2026:
+    Image:      stripe-s-04-11-2026:1
+    Port:       4242/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     500m
+      memory:  256Mi
+    Requests:
+      cpu:      50m
+      memory:   96Mi
+    Liveness:   http-get http://:4242/ delay=20s timeout=1s period=15s #success=1 #failure=3
+    Readiness:  http-get http://:4242/ delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment Variables from:
+      stripe-s-04-11-2026  Secret  Optional: false
+    Environment:
+      DOMAIN:      http://stripe-mlops-s-04-11-2026.test
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   stripe-s-04-11-2026-5f4774cd9b (3/3 replicas created)
+
+
+Name:                                                  nginx-s-04-11-2026
+Namespace:                                             mlops-s-04-11-2026
+Labels:                                                empreinte=s-04-11-2026
+                                                       nom=sahki
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 14:32:06 +0100
+Reference:                                             Deployment/nginx-s-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  4% (1m) / 60%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods     Value: 4    Period: 15 seconds
+      - Type: Percent  Value: 100  Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 120 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+
+
+Name:                                                  podinfo-s-04-11-2026
+Namespace:                                             mlops-s-04-11-2026
+Labels:                                                empreinte=s-04-11-2026
+                                                       nom=sahki
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 14:32:06 +0100
+Reference:                                             Deployment/podinfo-s-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  4% (1m) / 60%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods     Value: 4    Period: 15 seconds
+      - Type: Percent  Value: 100  Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 120 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+
+
+Name:                                                  stripe-s-04-11-2026
+Namespace:                                             mlops-s-04-11-2026
+Labels:                                                empreinte=s-04-11-2026
+                                                       nom=sahki
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 14:32:06 +0100
+Reference:                                             Deployment/stripe-s-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  2% (1m) / 60%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods     Value: 4    Period: 15 seconds
+      - Type: Percent  Value: 100  Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 120 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+
+
+Name:         isolation-s-04-11-2026
+Namespace:    mlops-s-04-11-2026
+Created on:   2026-11-04 14:32:06 +0100 CET
+Labels:       empreinte=s-04-11-2026
+              nom=sahki
+Annotations:  <none>
+Spec:
+  PodSelector:     <none> (Allowing the specific traffic to all pods in this namespace)
+  Allowing ingress traffic:
+    To Port: <any> (traffic allowed to all ports)
+    From:
+      PodSelector: <none>
+    ----------
+    To Port: 4242/TCP
+    To Port: 9898/TCP
+    From:
+      NamespaceSelector: kubernetes.io/metadata.name=kube-system
+      PodSelector: app.kubernetes.io/name=traefik
+  Not affecting egress traffic
+  Policy Types: Ingress

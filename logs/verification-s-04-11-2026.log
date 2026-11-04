@@ -1,0 +1,15 @@
+stripe-mlops-s-04-11-2026.test 200
+podinfo-mlops-s-04-11-2026.test 200
+nginx externe mlops 404
+stripe-preprod-s-04-11-2026.test 200
+podinfo-preprod-s-04-11-2026.test 200
+nginx externe preprod 404
+stripe-prod-s-04-11-2026.test 200
+podinfo-prod-s-04-11-2026.test 200
+nginx externe prod 404
+pod/verification-s-04-11-2026 created
+pod/verification-s-04-11-2026 condition met
+INTERNE_OK
+wget: can't connect to remote host (10.43.22.158): Connection refused
+ISOLATION_OK
+pod "verification-s-04-11-2026" deleted from mlops-s-04-11-2026 namespace

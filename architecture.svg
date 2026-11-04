@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#334155"/></marker></defs>
+<rect width="1100" height="720" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="45" y="45" font-size="26" font-weight="bold">Projet E5 de Sahki Enzo</text>
+<text x="45" y="75" font-size="16">K3s sur une VM Multipass Ubuntu 24.04 · empreinte s-04-11-2026</text>
+<rect x="45" y="110" width="240" height="90" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+<text x="68" y="145" font-size="20">Poste Windows</text><text x="68" y="173" font-size="15">Navigateur et fichier hosts</text>
+<path d="M285 155 H400" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="320" y="142" font-size="15">HTTP</text>
+<rect x="410" y="110" width="260" height="90" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+<text x="433" y="145" font-size="20">Traefik Ingress</text><text x="433" y="173" font-size="15">Route selon le nom demandé</text>
+<rect x="760" y="110" width="295" height="90" rx="10" fill="#ede9fe" stroke="#7c3aed"/>
+<text x="780" y="145" font-size="20">Netdata</text><text x="780" y="173" font-size="15">Interface web et mesures du nœud</text>
+<path d="M670 155 H750" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M540 200 V240 H210 V270 M540 240 V270 M540 240 H875 V270" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<g stroke="#94a3b8" fill="white"><rect x="45" y="280" width="320" height="265" rx="10"/><rect x="390" y="280" width="320" height="265" rx="10"/><rect x="735" y="280" width="320" height="265" rx="10"/></g>
+<g font-size="19" font-weight="bold"><text x="65" y="312">mlops-s-04-11-2026</text><text x="410" y="312">preprod-s-04-11-2026</text><text x="755" y="312">prod-s-04-11-2026</text></g>
+<g font-size="16"><text x="65" y="351">Stripe Checkout · port 4242</text><text x="65" y="385">Podinfo · port 9898</text><text x="65" y="419">Nginx · port 80 · interne</text><text x="65" y="465">3 réplicas par application</text><text x="65" y="495">HPA CPU · de 3 à 20 pods</text>
+<text x="410" y="351">Stripe Checkout · port 4242</text><text x="410" y="385">Podinfo · port 9898</text><text x="410" y="419">Nginx · port 80 · interne</text><text x="410" y="465">3 réplicas par application</text><text x="410" y="495">HPA CPU · de 3 à 20 pods</text>
+<text x="755" y="351">Stripe Checkout · port 4242</text><text x="755" y="385">Podinfo · port 9898</text><text x="755" y="419">Nginx · port 80 · interne</text><text x="755" y="465">3 réplicas par application</text><text x="755" y="495">HPA CPU · de 3 à 20 pods</text></g>
+<rect x="45" y="575" width="1010" height="95" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+<text x="65" y="607" font-size="18">NetworkPolicy : trafic interne au namespace et entrée Traefik vers Stripe et Podinfo</text>
+<text x="65" y="637" font-size="16">metrics-server → HPA   ·   Docker → images locales puis Docker Hub etest15   ·   Stripe → API de test</text>
+<text x="45" y="701" font-size="14">Les composants applicatifs sont répétés dans chaque environnement. Le cluster contient un seul nœud.</text>
+</g></svg>

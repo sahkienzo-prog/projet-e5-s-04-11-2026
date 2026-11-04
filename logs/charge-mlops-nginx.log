@@ -1,0 +1,53 @@
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing libuuid (2.41.6-r1)
+(2/5) Installing apr (1.7.5-r0)
+(3/5) Installing libexpat (2.10.0-r0)
+(4/5) Installing apr-util (1.6.4-r0)
+(5/5) Installing apache2-utils (2.4.69-r0)
+Executing busybox-1.37.0-r20.trigger
+OK: 8 MiB in 21 packages
+This is ApacheBench, Version 2.3 <$Revision: 1934973 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking nginx-s-04-11-2026 (be patient)
+Completed 1000000 requests
+Finished 1622264 requests
+
+
+Server Software:        nginx/1.28.3
+Server Hostname:        nginx-s-04-11-2026
+Server Port:            80
+
+Document Path:          /
+Document Length:        615 bytes
+
+Concurrency Level:      100
+Time taken for tests:   180.001 seconds
+Complete requests:      1622264
+Failed requests:        0
+Total transferred:      1375718032 bytes
+HTML transferred:       997720035 bytes
+Requests per second:    9012.51 [#/sec] (mean)
+Time per request:       11.096 [ms] (mean)
+Time per request:       0.111 [ms] (mean, across all concurrent requests)
+Transfer rate:          7463.69 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    5   4.8      3     101
+Processing:     0    6   5.5      4     124
+Waiting:        0    4   4.3      3     102
+Total:          0   11   9.1      7     181
+
+Percentage of the requests served within a certain time (ms)
+  50%      7
+  66%     11
+  75%     15
+  80%     17
+  90%     23
+  95%     29
+  98%     37
+  99%     43
+ 100%    181 (longest request)

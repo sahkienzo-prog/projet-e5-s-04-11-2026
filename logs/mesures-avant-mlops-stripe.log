@@ -1,0 +1,10 @@
+NAME                                    CPU(cores)   MEMORY(bytes)   
+nginx-s-04-11-2026-7bff8f6ff9-mfrfg     1m           5Mi             
+nginx-s-04-11-2026-7bff8f6ff9-rs9gh     1m           6Mi             
+nginx-s-04-11-2026-7bff8f6ff9-v4dqd     1m           6Mi             
+podinfo-s-04-11-2026-775d4cbc6c-lf5cp   1m           12Mi            
+podinfo-s-04-11-2026-775d4cbc6c-pzj5x   1m           12Mi            
+podinfo-s-04-11-2026-775d4cbc6c-qfdzc   1m           12Mi            
+stripe-s-04-11-2026-5f4774cd9b-6snwb    1m           52Mi            
+stripe-s-04-11-2026-5f4774cd9b-kgjml    1m           52Mi            
+stripe-s-04-11-2026-5f4774cd9b-q9gd4    1m           51Mi            

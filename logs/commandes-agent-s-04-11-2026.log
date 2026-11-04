@@ -1,0 +1,36 @@
+Journal reconstitue des commandes de deploiement effectivement executees par l'agent
+Ce fichier n'est pas un export de l'historique interactif de Sahki Enzo.
+Les sorties brutes sont conservees dans les autres journaux.
+
+Windows
+multipass list --format json
+docker version
+multipass info --all --format json
+multipass launch 24.04 --name e5-s-04-11-2026 --cpus 6 --memory 10G --disk 35G
+git clone https://github.com/stripe-samples/checkout-one-time-payments.git work/stripe-officiel
+git -C work/stripe-officiel rev-parse HEAD
+git init outputs/projet-e5-s-04-11-2026
+git -C outputs/projet-e5-s-04-11-2026 config user.name "Enzo Sahki"
+git -C outputs/projet-e5-s-04-11-2026 config user.email "enzo.sahki@users.noreply.local"
+multipass transfer --recursive outputs/projet-e5-s-04-11-2026 e5-s-04-11-2026:/home/ubuntu/
+curl.exe -s -o NUL -w '%{http_code}' -H 'Host: podinfo-mlops-s-04-11-2026.test' http://172.26.141.177
+
+Ubuntu via multipass exec, dossier /home/ubuntu/projet-e5-s-04-11-2026
+bash scripts/01-installer-s-04-11-2026.sh > logs/installation-s-04-11-2026.log 2>&1
+sudo k3s kubectl get nodes -o wide
+bash scripts/02-images-s-04-11-2026.sh > logs/images-s-04-11-2026.log 2>&1
+bash scripts/04-apercu-sans-paiement-s-04-11-2026.sh > logs/apercu-s-04-11-2026.log 2>&1
+bash scripts/05-deployer-s-04-11-2026.sh > logs/deploiement-s-04-11-2026.log 2>&1
+sudo k3s kubectl wait --for=condition=Available deployment --all -A --timeout=180s
+sudo k3s kubectl get pods -A
+sudo k3s kubectl get hpa -A
+sudo k3s kubectl top pods -A
+bash scripts/09-verifier-s-04-11-2026.sh > logs/verification-s-04-11-2026.log 2>&1
+bash scripts/07-charge-s-04-11-2026.sh mlops stripe > logs/pilote-stripe.log 2>&1
+bash scripts/07-charge-s-04-11-2026.sh mlops podinfo > logs/pilote-podinfo.log 2>&1
+bash scripts/07-charge-s-04-11-2026.sh mlops nginx > logs/pilote-nginx.log 2>&1
+bash scripts/08-preuves-s-04-11-2026.sh
+sudo docker login
+
+Les trois scripts de charge ont ete lances en parallele puis attendus avec wait.
+Les commandes de construction et d'application detaillees sont lisibles dans les scripts versionnes.
