@@ -92,7 +92,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: netdata-s-04-11-2026.localhost
+  - host: netdata-s-04-11-2026.test
     http:
       paths:
       - path: /

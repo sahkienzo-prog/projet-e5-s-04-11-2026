@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: stripe-preprod-s-04-11-2026.localhost
+  - host: stripe-preprod-s-04-11-2026.test
     http:
       paths:
       - path: /
@@ -19,7 +19,7 @@ spec:
             name: stripe-s-04-11-2026
             port:
               number: 4242
-  - host: podinfo-preprod-s-04-11-2026.localhost
+  - host: podinfo-preprod-s-04-11-2026.test
     http:
       paths:
       - path: /

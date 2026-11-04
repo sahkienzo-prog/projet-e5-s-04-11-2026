@@ -37,3 +37,22 @@ spec:
     pods: "70"
     requests.cpu: "4"
     requests.memory: 5Gi
+
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limites-s-04-11-2026
+  namespace: preprod-s-04-11-2026
+  labels:
+    nom: sahki
+    empreinte: s-04-11-2026
+spec:
+  limits:
+  - type: Container
+    defaultRequest:
+      cpu: 25m
+      memory: 16Mi
+    default:
+      cpu: "1"
+      memory: 256Mi
